@@ -1,0 +1,26 @@
+
+.icon-btn{
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.icon-btn:hover{
+    color: red;
+}
+.icon-btn:active{
+    color: black;
+}
+
+@media (min-width:600px) {
+    
+#cont1{
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 40px red;
+}
+
+}

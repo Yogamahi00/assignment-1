@@ -1,0 +1,35 @@
+<div class="container my-5 text-center" id="cont1" style=" border-radius: 20px;">
+    <div class="row g-3 mt-5 justify-content-center align-items-center">
+        <div class="col col-lg-5">
+            <input type="text" placeholder="Search Product" id="searchbox" [(ngModel)]="filterString"
+                (input)="filterProduct()" class="p-1">
+        </div>
+        <div class="col col-lg-5">
+            <button class="btn btn-dark" (click)="addProduct()">
+                ADD PRODUCT
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-md-11">
+            <table class="table table-bordered table-hover mt-5" style="border: black;">
+                <thead class="bg-dark text-danger">
+                    <tr>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of filteredProducts">
+                        <td style="font-weight: bolder;">{{product.name}}</td>
+                        <td>{{product.desc}}</td>
+                        <td><button class="icon-btn"><i class='bx bxs-edit-alt' (click)="editProduct(product.id)"></i></button></td>
+                        <td><button class="icon-btn"><i class='bx bx-x' (click)="deleteProduct(product.id)"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
